@@ -1,9 +1,20 @@
-<p><%= link_to "Create a movie list", new_list_path %></p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(http://www.maxwellssyracuse.com/wp-content/uploads/2018/08/live-music-banner-2.jpg);">
+  <div class="container">
+    <h1>Watch List <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Create your watch list for this weekend.</p>
+    <p class="btn btn-flat"><%= link_to "Create a movie list", new_list_path %></p>
+  </div>
+</div>
 
-<p><% @lists.each do |list| %>
-<strong><%= link_to list.name, list %></strong>
 
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    Breakfast
+  </div>
+</div>
+
+
+<% @lists.each do |list| %>
+<%= link_to list.name, list %>
 <%= cl_image_tag list.photo.key %>
-
-<br>
-<% end %></p>
+<% end %>
