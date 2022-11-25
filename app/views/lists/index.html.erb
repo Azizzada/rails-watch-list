@@ -2,5 +2,8 @@
 
 <p><% @lists.each do |list| %>
 <strong><%= link_to list.name, list %></strong>
+
+<%= cl_image_tag list.photo.key %>
+
 <br>
 <% end %></p>
